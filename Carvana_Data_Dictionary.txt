@@ -1,0 +1,37 @@
+Field Name					Definition
+RefID				        	Unique (sequential) number assigned to vehicles
+IsBadBuy					Identifies if the kicked vehicle was an avoidable purchase 
+PurchDate					object: The Date the vehicle was Purchased at Auction          (k.p. wie )
+Auction						object: Auction provider at which the  vehicle was purchased   (Manheim, Adesa, other ----> one hot encoding)
+VehYear						int: The manufacturer's year of the vehicle			
+VehicleAge					int: The Years elapsed since the manufacturer's year
+Make						object: Vehicle Manufacturer 					(Zu viele Zustände --> evntl andere Methode)
+Model						object: Vehicle Model						(Zu viele Zustände --> evntl andere Methode)
+Trim						object: Vehicle Trim Level (Fahrzeugausstattung)		(Zu viele Zustände --> evntl andere Methode)
+SubModel					object: Vehicle Submodel					(Zu viele Zustände --> evntl andere Methode)
+Color						object: Vehicle Color						(One Hot Encoding)
+Transmission					object: Vehicles transmission type (Automatic, Manual)   (Binär: 1 oder 0)
+WheelTypeID					float: The type id of the vehicle wheel ----------------------|v
+WheelType					object: The vehicle wheel type description (Alloy(Felge?), Covers(schwule Abdeckung?) (Binär 1 oder 0)
+VehOdo						int: The vehicles odometer reading
+Nationality					object: The Manufacturer's country  (4 Zustände --> One Hot Encoding?)
+Size						object: The size category of the vehicle (Compact, SUV, etc.) (Deutlich mehr zustände --> andere Methode)                pandas funktion getDummies
+TopThreeAmericanName				object: Identifies if the manufacturer is one of the top three American manufacturers  (4 Zustände --> One Hot Encoding?)
+MMRAcquisitionAuctionAveragePrice		float: Acquisition price for this vehicle in average condition at time of purchase	(alle MMR unique: was machen)
+MMRAcquisitionAuctionCleanPrice			float: Acquisition price for this vehicle in the above Average condition at time of purchase
+MMRAcquisitionRetailAveragePrice		float: Acquisition price for this vehicle in the retail market in average condition at time of purchase
+MMRAcquisitonRetailCleanPrice			float: Acquisition price for this vehicle in the retail market in above average condition at time of purchase
+MMRCurrentAuctionAveragePrice			float: Acquisition price for this vehicle in average condition as of current day	
+MMRCurrentAuctionCleanPrice			float: Acquisition price for this vehicle in the above condition as of current day
+MMRCurrentRetailAveragePrice			float: Acquisition price for this vehicle in the retail market in average condition as of current day
+MMRCurrentRetailCleanPrice			float: Acquisition price for this vehicle in the retail market in above average condition as of current day
+PRIMEUNIT					object: Identifies if the vehicle would have a higher demand than a standard purchase (Extrem viele NULL Werte: Macht überhaupt Sinn? Vielleicht mal darstellen)
+AUCGUART					object: The level guarntee provided by auction for the vehicle (Green light - Guaranteed/arbitratable, Yellow Light - caution/issue, red light - sold as is) (Extrem viele NULL Werte: Macht überhaupt Sinn? Vielleicht mal darstellen)
+BYRNO						int: Unique number assigned to the buyer that purchased the vehicle (wenn es unique ist, vielleicht rausstreichen --> schauen wie sich das auf KNN auswirkt)
+VNZIP                           	        int: Zipcode where the car was purchased	(schwierig)
+VNST                         	  	        object: State where the the car was purchased   (schwierig)
+VehBCost					float: Acquisition cost paid for the vehicle at time of purchase
+IsOnlineSale					int: Identifies if the vehicle was originally purchased online
+WarrantyCost                  	         	int: Warranty price (term=36month  and millage=36K) 
+
+https://faculty.nps.edu/sebuttre/home/Research/KnnCat/ordsdoc.html
