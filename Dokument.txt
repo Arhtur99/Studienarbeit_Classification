@@ -1,0 +1,8 @@
+Problem: 34 Variablen --> viele String Prediktoren, die nochmal deutlich mehr Variablen ergeben, wenn man diese ordnungsgemäß für den Algorithmus transformiert, dadurch besteht die 
+gefahr des Overfittings.
+Lösung: Mit Datenvisualisierung herausfinden, welche Variablen die releveantesten sind, damit den Algorithmus füttern.
+
+Schritt 1: Datenvisualisierung
+Schritt 2: Daten transformieren ( unrelevante Variablen entfernen)
+Schritt 3: Algorithmus füttern
+Schritt 4: Ergebnisse
