@@ -1,0 +1,4 @@
+
+# Ändert None/NaN Werte der Spalte Color in "NOT AVAIL"
+
+data_color_isbadbuy.Color.fillna("NOT AVAIL")
