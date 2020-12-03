@@ -6,3 +6,6 @@ Schritt 1: Datenvisualisierung
 Schritt 2: Daten transformieren ( unrelevante Variablen entfernen)
 Schritt 3: Algorithmus füttern
 Schritt 4: Ergebnisse
+
+Weiters:
+-Trendlinie zwischen Datum und IsBadBuy
