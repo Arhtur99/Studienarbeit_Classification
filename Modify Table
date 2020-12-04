@@ -2,3 +2,46 @@
 # Ändert None/NaN Werte der Spalte Color in "NOT AVAIL"
 
 data_color_isbadbuy.Color.fillna("NOT AVAIL")
+
+Betroffene Spalten mit unvollständigen Werten:
+
+8   Trim                               70623 non-null  object 
+
+9   SubModel                           72975 non-null  object 
+
+10  Color                              72975 non-null  object 
+-> None Werte auf "NOT AVAIL" setzen
+
+11  Transmission                       72974 non-null  object 
+-> Modelwert nehmen
+
+12  WheelTypeID                        69814 non-null  float64
+
+13  WheelType                          69809 non-null  object 
+-> Allu-Felgenn oder Stahlfelgen
+
+15  Nationality                        72978 non-null  object 
+-> Herstellerland (Eventuell nach Marken vergleichen und Wert einsetzen)
+
+16  Size                               72978 non-null  object 
+-> Autokategorie (Limousine, Stufenheck ....)
+
+17  TopThreeAmericanName               72978 non-null  object 
+-> Identifies if the manufacturer is one of the top three American manufacturers
+  Irgendwie nach Make filtern und einsetzen oder eine weiter Variable einfügen
+
+18  MMRAcquisitionAuctionAveragePrice  72965 non-null  float64
+19  MMRAcquisitionAuctionCleanPrice    72965 non-null  float64
+20  MMRAcquisitionRetailAveragePrice   72965 non-null  float64
+21  MMRAcquisitonRetailCleanPrice      72965 non-null  float64
+22  MMRCurrentAuctionAveragePrice      72668 non-null  float64
+23  MMRCurrentAuctionCleanPrice        72668 non-null  float64
+24  MMRCurrentRetailAveragePrice       72668 non-null  float64
+25  MMRCurrentRetailCleanPrice         72668 non-null  float64
+-> Mit Median/Modal Wert auffüllen
+
+26  PRIMEUNIT                          3419 non-null   object 
+-> Identifies if the vehicle would have a higher demand than a standard purchase
+
+27  AUCGUART                           3419 non-null   object   
+-> The level guarntee provided by auction for the vehicle
