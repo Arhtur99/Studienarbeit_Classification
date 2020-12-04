@@ -2,6 +2,8 @@
 # Ändert None/NaN Werte der Spalte Color in "NOT AVAIL"
 
 data_color_isbadbuy.Color.fillna("NOT AVAIL")
+median = df.Spalte.median()
+mode = df.Spalte.mode()
 
 Betroffene Spalten mit unvollständigen Werten:
 
